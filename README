@@ -1,0 +1,19 @@
+# News Aggregator Project
+
+## Overview
+
+This repository contains a suite of applications designed to fetch news from an RSS API, process it via Kafka, and store it in Redis. It also includes a Spring Boot application to serve the news data and a ReactJS UI for displaying it.
+
+## Components
+
+1. **RSS Fetcher Job**
+   - **Description**: Periodically fetches news articles from an RSS API.
+   - **Functionality**: Pushes fetched news articles to a Kafka queue for downstream processing.
+
+2. **Kafka Queue and Consumer**
+   - **Description**: A Kafka queue setup to handle news messages.
+   - **Consumer Functionality**: Listens for incoming news messages and saves them into Redis for efficient retrieval.
+
+3. **News Application**
+   - **Backend**: Spring Boot API providing endpoints to access stored news articles.
+   - **Frontend**: ReactJS-based UI to display news content to end-users.
